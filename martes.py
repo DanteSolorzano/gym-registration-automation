@@ -28,11 +28,11 @@ buttons = wait.until(EC.presence_of_all_elements_located(
 
 print(f"Se encontraron {len(buttons)} botones de actividades disponibles")
 
-# --- 5. Hacer clic en el botón del lunes (último de los 5) ---
+# --- 5. Hacer clic en el botón del martes (último de los 5) ---
 if len(buttons) >= 5:
     lunes = buttons[-4]
     lunes.click()
-    print("Se hizo clic en el botón correspondiente al lunes")
+    print("Se hizo clic en el botón correspondiente al martes")
 else:
     print("No se encontraron suficientes botones para la semana")
 
@@ -45,10 +45,10 @@ time.sleep(2)
 try:
     horario_lunes = wait.until(EC.element_to_be_clickable(
         (By.XPATH,
-         "/html/body/div[1]/div[2]/div[3]/div/div/div[2]/div/div[2]/div[11]/span[2]")
+         '//*[@id="Calendar"]/div/div[2]/div/div[2]/div[4]/span[2]')
     ))
     horario_lunes.click()
-    print("Se hizo clic en el botón del horario del lunes")
+    print("Se hizo clic en el botón del horario del martes")
 except:
     print("No se pudo encontrar o hacer clic en el botón del horario")
 

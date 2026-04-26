@@ -41,7 +41,7 @@ time.sleep(2)
 # --- 7. Hacer clic en el botón del horario usando XPath ---
 try:
     horario_lunes = wait.until(EC.element_to_be_clickable(
-        (By.XPATH, "/html/body/div[1]/div[2]/div[3]/div/div/div[2]/div/div[2]/div[6]/span[2]")
+        (By.XPATH, '//*[@id="Calendar"]/div/div[2]/div/div[2]/div[8]/span[2]')
     ))
     horario_lunes.click()
     print("Se hizo clic en el botón del horario del lunes")
